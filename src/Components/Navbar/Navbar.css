@@ -5,6 +5,11 @@
     height: 120px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 ul {
     display: flex;
     gap: 25px;
