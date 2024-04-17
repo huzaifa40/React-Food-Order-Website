@@ -1,0 +1,23 @@
+.download-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 60px 0px;
+}
+
+.download-content p{
+    font-size: max(3vw, 20px);
+    text-align: center;
+    font-weight: 700;
+}
+
+.download-images {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.download-images img:hover {
+    transform: scale(1.1);
+}

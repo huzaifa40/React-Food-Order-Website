@@ -1,0 +1,45 @@
+.footer {
+    background-color: rgb(24, 23, 23);
+    color: white;
+    padding: 25px 8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.upper-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+    width: 100%;
+    gap: 100px;    
+}
+
+.left-upper-section {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.left-upper-section .heading {
+    font-size: 38px;
+    font-weight: 700;    
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.list-options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+} 
+
+.footer p {
+    color: gainsboro;
+}
