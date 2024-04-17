@@ -4,16 +4,24 @@ import { assets } from '../../Assets/assets/assets'
 import { Link } from 'react-scroll'
 import { Link as RouterLink } from 'react-router-dom'
 import { shopContext } from '../ShopContext/ShopContext'
+import Menu from '../Menu/Menu'
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = ({setShowLogin}) => {
     const [menu, setMenu] = useState("home")
     const {getTotalAmount} = useContext(shopContext)
-    
+
+    const navigate = useNavigate();
+
+    const handleItemClick = () => {
+      navigate('/home');
+    };
+      
   return (
     <div className='container'>
         <h1>Eato.</h1>
         <ul>
-            <RouterLink to='/'><Link to='home'><li onClick={() => setMenu("home") } className={menu === "home"? "active" : ""}>Home</li></Link></RouterLink>
+            <Link to='home'><li onClick={(e) => {setMenu("home"); handleItemClick();}} className={menu === "home" ? "active" : ""}>Home</li></Link>
             <Link to="menu" smooth={true} duration={500}><li onClick={() => setMenu("menu") } className={menu === "menu"? "active" : ""}>Menu</li></Link>
             <Link to="mobile-app" smooth={true} duration={500}><li onClick={() => setMenu("mobile") } className={menu === "mobile"? "active" : ""}>Mobile-app</li></Link>
             <Link to="contact" smooth={true} duration={500}><li onClick={() => setMenu("contact") } className={menu === "contact"? "active" : ""}>Contact us</li></Link>
